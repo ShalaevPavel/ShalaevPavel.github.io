@@ -1,6 +1,3 @@
-{% load static %}
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,30 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Home - File works</title>
-    <link rel="stylesheet" href="../../static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic&amp;display=swap">
-    <link rel="stylesheet" href="../../static/assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="../../static/assets/fonts/simple-line-icons.min.css">
-    <script type="text/javascript">
-        function hide_func(){
-      document.querySelector('#to_insert').innerHTML = '';}
-
-        function show_encrypt(){
-            fetch('{% url "encrypt" %}').then(response => response.text()).then(
-                data => {
-                    document.querySelector('#to_insert').innerHTML = data;
-                }
-            )
-        }
-
-        function build(){
-            fetch('{% url "build" %}').then(response => response.text()).then(
-                data => {
-                    document.querySelector('#to_insert').innerHTML = data;
-                }
-            )
-        }
-    </script>
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
 </head>
 
 <body id="page-top"><a class="menu-toggle rounded" href="#"><i class="fa fa-bars"></i></a>
@@ -43,16 +20,16 @@
                     <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#page-top">Home</a></li>
                     <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#about">Form</a></li>
                     <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Tools</a></li>
+                    <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item sidebar-nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <header class="d-flex masthead" style="background-image:url('/static/assets/img/bg-masthead.jpg');">
+    <header class="d-flex masthead" style="background-image:url('assets/img/bg-masthead.jpg');">
         <div class="container my-auto text-center">
             <h1 class="mb-1">File Encription/Zipping</h1>
-            <h3 class="mb-5"><em>Use it for manipulations with files</em></h3><a id="encrypt_button" class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#about" onclick=" return show_encrypt();">Encrypt url</a><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#about" onclick="return build();">Build</a>
+            <h3 class="mb-5"><em>Use it for manipulations with files</em></h3><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#about">Encrypt url</a><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#about">Zip url</a>
             <div class="overlay"></div>
         </div>
     </header>
@@ -61,10 +38,7 @@
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <h2>Choose your file&nbsp;</h2>
-                    <div id="to_insert">
-
-                    </div>
-                    <p class="lead mb-5"><span>Feel free to drag a file on your computer</span><span>!</span></p><a id="hide_button" class="btn btn-dark btn-xl js-scroll-trigger" role="button" href="#about" onclick="return hide_func();">Hide all&nbsp;</a>
+                    <p class="lead mb-5"><span>Feel free to drag a file on your computer</span><span>!</span></p><a class="btn btn-dark btn-xl js-scroll-trigger" role="button" href="#services" onclick="">Hide all&nbsp;</a>
                 </div>
             </div>
         </div>
@@ -77,20 +51,20 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0"><span class="mx-auto service-icon rounded-circle mb-3"><i class="icon-screen-smartphone"></i></span>
-                    <h4><strong>Encryption</strong></h4>
-                    <p class="mb-0 text-faded">Decrypt is also available</p>
+                    <h4><strong>Responsive</strong></h4>
+                    <p class="mb-0 text-faded">Looks great on any screen size!</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0"><span class="mx-auto service-icon rounded-circle mb-3"><i class="icon-pencil"></i></span>
-                    <h4><strong>Zipping</strong></h4>
-                    <p class="mb-0 text-faded">Unzipping is also available</p>
+                    <h4><strong>Redesigned</strong></h4>
+                    <p class="mb-0 text-faded">Freshly redesigned for Bootstrap 5.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0"><span class="mx-auto service-icon rounded-circle mb-3"><i class="icon-like"></i></span>
-                    <h4><strong>Evaluation</strong></h4>
-                    <p class="mb-0 text-faded"><span>Calculating the result of math expressions</span><span></span></p>
+                    <h4><strong>Favorited</strong></h4>
+                    <p class="mb-0 text-faded"><span>Milions of users&nbsp;</span><i class="fa fa-heart"></i><span>&nbsp;us!</span></p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-5 mb-lg-0"><span class="mx-auto service-icon rounded-circle mb-3"><i class="icon-mustache"></i></span>
-                    <h4><strong>Parsing</strong></h4>
-                    <p class="mb-0 text-faded">Doesn't matter whether it is txt, json or xml</p>
+                    <h4><strong>Question</strong></h4>
+                    <p class="mb-0 text-faded">I mustache you a question...</p>
                 </div>
             </div>
         </div>
@@ -98,63 +72,63 @@
     <section id="portfolio" class="content-section">
         <div class="container">
             <div class="content-section-heading text-center">
-                <h3 class="text-secondary mb-0">Tools</h3>
-                <h2 class="mb-5">Design Patterns</h2>
+                <h3 class="text-secondary mb-0">Portfolio</h3>
+                <h2 class="mb-5">Recent Projects</h2>
             </div>
             <div class="row g-0">
                 <div class="col-lg-6"><a class="portfolio-item" href="#">
                         <div class="caption">
                             <div class="caption-content">
-                                <h2>Facade</h2>
-                                <p class="mb-0">Used as form</p>
+                                <h2>Stationary</h2>
+                                <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
                             </div>
-                        </div><img class="img-fluid" src="/static/assets/img/facade.png">
+                        </div><img class="img-fluid" src="assets/img/portfolio-1.jpg">
                     </a></div>
                 <div class="col-lg-6"><a class="portfolio-item" href="#">
                         <div class="caption">
                             <div class="caption-content">
-                                <h2>Decorator</h2>
-                                <p class="mb-0">For  builder implementation</p>
+                                <h2>Ice Cream</h2>
+                                <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
                             </div>
-                        </div><img class="img-fluid" src="../../static/assets/img/decor.png">
+                        </div><img class="img-fluid" src="assets/img/portfolio-2.jpg">
                     </a></div>
                 <div class="col-lg-6"><a class="portfolio-item" href="#">
                         <div class="caption">
                             <div class="caption-content">
-                                <h2>Builder</h2>
-                                <p class="mb-0">Encryption, decryption, zipping, unzipping</p>
+                                <h2>Strawberries</h2>
+                                <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
                             </div>
-                        </div><img class="img-fluid" src="../../static/assets/img/builder.png">
+                        </div><img class="img-fluid" src="assets/img/portfolio-3.jpg">
                     </a></div>
                 <div class="col-lg-6"><a class="portfolio-item" href="#">
                         <div class="caption">
                             <div class="caption-content">
-                                <h2>Observer</h2>
-                                <p class="mb-0">Front end state changing</p>
+                                <h2>Workspace</h2>
+                                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
                             </div>
-                        </div><img class="img-fluid" src="../../static/assets/img/observer.png">
+                        </div><img class="img-fluid" src="assets/img/portfolio-4.jpg">
                     </a></div>
             </div>
         </div>
     </section>
-{#    <section class="content-section bg-primary text-white">#}
-{#        <div class="container text-center">#}
-{#            <h2 class="mb-4">The buttons below are impossible to resist..</h2><a class="btn btn-light btn-xl me-4" role="button" href="#">Click Me!</a><a class="btn btn-dark btn-xl me-4" role="button" href="#">Look at Me</a>#}
-{#        </div>#}
-{#    </section>#}
-    <section id="contact" class="map" style="background-image:url('/static/assets/img/bg-masthead.jpg');"></section>
+    <section class="content-section bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">The buttons below are impossible to resist..</h2><a class="btn btn-light btn-xl me-4" role="button" href="#">Click Me!</a><a class="btn btn-dark btn-xl me-4" role="button" href="#">Look at Me</a>
+        </div>
+    </section>
+    <section id="contact" class="map"></section>
     <footer class="footer text-center">
         <div class="container">
             <ul class="list-inline mb-5">
-                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="https://www.facebook.com/pavel.shalaev.710"><i class="icon-social-facebook"></i></a></li>
-                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="https://www.linkedin.com/in/pavel-shalaev-b71b23204/"><i class="icon-social-linkedin"></i></a></li>
-                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="https://github.com/ShalaevPavel"><i class="icon-social-github"></i></a></li>
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-facebook"></i></a></li>
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-twitter"></i></a></li>
+                <li class="list-inline-item">&nbsp;<a class="link-light social-link rounded-circle" href="#"><i class="icon-social-github"></i></a></li>
             </ul>
             <p class="text-muted mb-0 small">Copyright &nbsp;© File works 2022</p>
         </div><a class="js-scroll-trigger scroll-to-top rounded" href="#page-top"><i class="fa fa-angle-up"></i></a>
     </footer>
-    <script src="../../static/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../static/assets/js/stylish-portfolio.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/stylish-portfolio.js"></script>
 </body>
 
 </html>
